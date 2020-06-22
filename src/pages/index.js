@@ -7,15 +7,15 @@ import "../../static/css/custom.css"
 import "owl.carousel/dist/assets/owl.carousel.css"
 //import Header from "../components/header"
 import { action_saveMobile_get } from "../action/mobile"
-import { Link } from "gatsby"
-import { Main } from "../../static/js/main"
+//import { Link } from "gatsby"
+//import { Main } from "../../static/js/main"
 
 export default function Home() {
   const [mobile, setMobile] = useState("");
   const [windowsWidth,setWidth]=useState(100);
   useEffect(() => {
     document.title = `旅点科技 Trip International`;
-    Main();
+    //Main();
   },[windowsWidth]);
   function onMobileChange(event){
     setMobile(event.target.value);

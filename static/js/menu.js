@@ -56,6 +56,3 @@ $.fn.menumaker = function (options) {
   })
 }
 
-// (function ($) {
-
-// })(jQuery);
