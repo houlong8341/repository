@@ -1,115 +1,44 @@
 import React, { useState, useEffect } from "react"
+import Helmet from "react-helmet"
+import "owl.carousel/dist/assets/owl.carousel.css"
 import "font-awesome/css/font-awesome.min.css"
 import "react-fontawesome"
-import "../../static/css/bootstrap.min.css"
-import "../../static/css/style.css"
-import "../../static/css/custom.css"
-import "owl.carousel/dist/assets/owl.carousel.css"
-//import Header from "../components/header"
+import "../assets/css/bootstrap.min.css"
+import "../assets/css/style.css"
+import "../assets/css/custom.css"
+import { Link } from "gatsby"
+import { Main } from "../assets/js/main"
+import Header from "../components/header"
+import Footer from "../components/footer"
 import { action_saveMobile_get } from "../action/mobile"
-//import { Link } from "gatsby"
-import { Main } from "../../static/js/main"
 
 export default function Home1() {
-  const [mobile, setMobile] = useState("");
-  const [windowsWidth]=useState(100);
+  const [mobile, setMobile] = useState("")
+  const [windowsWidth] = useState(100)
   useEffect(() => {
-    document.title = `旅点科技 Trip International`;
-    Main();
-  },[windowsWidth]);
-  function onMobileChange(event){
-    setMobile(event.target.value);
+    Main()
+  }, [windowsWidth])
+  function onMobileChange(event) {
+    setMobile(event.target.value)
   }
   function onMobileSubmit(e) {
-    e.preventDefault();
-    console.log(mobile);
-    action_saveMobile_get(mobile);
+    e.preventDefault()
+    console.log(mobile)
+    action_saveMobile_get(mobile)
   }
   return (
     <div>
+      <Helmet>
+        <title>旅点科技 Trip International</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="旅点科技" />
+        <meta name="keywords" content="旅点科技" />
+      </Helmet>
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <header className="header">
-        <div className="header-main">
-          <div className="container-fluid">
-            <div className="row align-items-center main-menu-wrapper justify-content-between">
-              <div className="col order-last order-sm-first">
-                <div className="main-menu d-flex align-items-center justify-content-end justify-content-sm-start">
-                  <div className="menu-trigger">
-                    <span></span>
-                  </div>
-                  <div className="nav-wrapper">
-                    <ul className="nav align-items-center">
-                      <li className="current-menu-item">
-                        <a href="index.html">首页</a>
-                      </li>
-                      <li>
-                        <a href="about.html">卖产品</a>
-                      </li>
+      <Header />
 
-                      <li className="menu-item-has-children">
-                        <a href="#">买产品</a>
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="service.html">service</a>
-                          </li>
-                          <li>
-                            <a href="service-details.html">service details</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a href="#">经营零售</a>
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="coming-soon.html">Coming Soon</a>
-                          </li>
-                          <li>
-                            <a href="404.html">404</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a href="#">旅点资讯</a>
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="blog.html">Blog</a>
-                          </li>
-                          <li>
-                            <a href="blog-with-sidebar.html">
-                              Blog with Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a href="blog-details.html">blog details</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a className="nav_signup" href="contact.html">
-                          加入公测
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col text-sm-center logo-holder">
-                <a href="index.html" className="logo">
-                  <img
-                    className="logo_img"
-                    src={require("../../static/img/logo.png")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
       <div className="banner">
         <div className="banner_slider">
           <div className="single_slide">
@@ -126,13 +55,13 @@ export default function Home1() {
                 <div className="m0a single-banner-image text-center col-sm-6 d-none d-sm-block">
                   <div className="search-icon-box position-absolute">
                     <img
-                      src={require("../../static/img/banner/search-icon.png")}
+                      src={require("../assets/img/banner/search-icon.png")}
                       alt=""
                     />
                   </div>
                   <img
                     className="banner_img"
-                    src={require("../../static/img/banner/banner1.svg")}
+                    src={require("../assets/img/banner/banner1.svg")}
                     alt=""
                   />
                 </div>
@@ -160,60 +89,60 @@ export default function Home1() {
               >
                 <a href="#" className="single-brand-logo">
                   <img
-                    src={require("../../static/img/brand/jinqiao.jpg")}
+                    src={require("../assets/img/brand/jinqiao.jpg")}
                     data-rjs="2"
                     alt=""
                   />
                   <img
-                    src={require("../../static/img/brand/jinqiao.jpg")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                </a>
-                <a href="#" className="single-brand-logo">
-                  <img
-                    src={require("../../static/img/brand/ama2.png")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                  <img
-                    src={require("../../static/img/brand/ama2.png")}
+                    src={require("../assets/img/brand/jinqiao.jpg")}
                     data-rjs="2"
                     alt=""
                   />
                 </a>
                 <a href="#" className="single-brand-logo">
                   <img
-                    src={require("../../static/img/brand/bd.png")}
+                    src={require("../assets/img/brand/ama2.png")}
                     data-rjs="2"
                     alt=""
                   />
                   <img
-                    src={require("../../static/img/brand/bd.png")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                </a>
-                <a href="#" className="single-brand-logo">
-                  <img
-                    src={require("../../static/img/brand/dida.png")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                  <img
-                    src={require("../../static/img/brand/dida.png")}
+                    src={require("../assets/img/brand/ama2.png")}
                     data-rjs="2"
                     alt=""
                   />
                 </a>
                 <a href="#" className="single-brand-logo">
                   <img
-                    src={require("../../static/img/brand/ws.png")}
+                    src={require("../assets/img/brand/bd.png")}
                     data-rjs="2"
                     alt=""
                   />
                   <img
-                    src={require("../../static/img/brand/ws.png")}
+                    src={require("../assets/img/brand/bd.png")}
+                    data-rjs="2"
+                    alt=""
+                  />
+                </a>
+                <a href="#" className="single-brand-logo">
+                  <img
+                    src={require("../assets/img/brand/dida.png")}
+                    data-rjs="2"
+                    alt=""
+                  />
+                  <img
+                    src={require("../assets/img/brand/dida.png")}
+                    data-rjs="2"
+                    alt=""
+                  />
+                </a>
+                <a href="#" className="single-brand-logo">
+                  <img
+                    src={require("../assets/img/brand/ws.png")}
+                    data-rjs="2"
+                    alt=""
+                  />
+                  <img
+                    src={require("../assets/img/brand/ws.png")}
                     data-rjs="2"
                     alt=""
                   />
@@ -239,7 +168,7 @@ export default function Home1() {
                 <div className="index-single-service single-service">
                   <div className="icon index_ss_icon">
                     <img
-                      src={require("../../static/img/icon/service-1.svg")}
+                      src={require("../assets/img/icon/service-1.svg")}
                       className="svg"
                       alt=""
                     />
@@ -256,7 +185,7 @@ export default function Home1() {
                 <div className="index-single-service single-service">
                   <div className="icon index_ss_icon">
                     <img
-                      src={require("../../static/img/icon/service-2.svg")}
+                      src={require("../assets/img/icon/service-2.svg")}
                       className="svg"
                       alt=""
                     />
@@ -274,7 +203,7 @@ export default function Home1() {
                 <div className="index-single-service single-service">
                   <div className="icon index_ss_icon">
                     <img
-                      src={require("../../static/img/icon/service-3.svg")}
+                      src={require("../assets/img/icon/service-3.svg")}
                       className="svg"
                       alt=""
                     />
@@ -296,7 +225,7 @@ export default function Home1() {
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../../static/img/feature/feature1.svg")}
+                  src={require("../assets/img/feature/feature1.svg")}
                   alt=""
                 />
               </div>
@@ -349,7 +278,7 @@ export default function Home1() {
             <div className="col-lg-6 order-first order-lg-last">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../../static/img/feature/feature2.svg")}
+                  src={require("../assets/img/feature/feature2.svg")}
                   alt=""
                 />
               </div>
@@ -360,7 +289,7 @@ export default function Home1() {
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../../static/img/feature/feature3.svg")}
+                  src={require("../assets/img/feature/feature3.svg")}
                   alt=""
                 />
               </div>
@@ -407,7 +336,7 @@ export default function Home1() {
             <div className="col-lg-6 order-first order-lg-last">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../../static/img/feature/feature2.svg")}
+                  src={require("../assets/img/feature/feature2.svg")}
                   alt=""
                 />
               </div>
@@ -426,7 +355,7 @@ export default function Home1() {
               <div className="mb-50 mb-lg-0">
                 <img
                   className="su_img"
-                  src={require("../../static/img/feature/beta.svg")}
+                  src={require("../assets/img/feature/beta.svg")}
                   data-rjs="2"
                   alt=""
                 />
@@ -448,16 +377,16 @@ export default function Home1() {
                   <p>提交联系方式，加入公测~</p>
                   <div className="theme-input-group">
                     <form onSubmit={onMobileSubmit}>
-                    <input
-                      className="service_inp"
-                      type="text"
-                      name="mobile"
-                      placeholder="手机，微信或邮箱~"
-                      onChange={onMobileChange}
-                    />
-                    <button className="red_btn" type="submit">
-                      加入公测
-                    </button>
+                      <input
+                        className="service_inp"
+                        type="text"
+                        name="mobile"
+                        placeholder="手机，微信或邮箱~"
+                        onChange={onMobileChange}
+                      />
+                      <button className="red_btn" type="submit">
+                        加入公测
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -503,7 +432,7 @@ export default function Home1() {
                     <div className="image">
                       <img
                         className="small_logo"
-                        src={require("../../static/img/pure_logo.jpg")}
+                        src={require("../assets/img/pure_logo.jpg")}
                         data-rjs="2"
                         alt=""
                       />
@@ -523,7 +452,7 @@ export default function Home1() {
                     <div className="image">
                       <img
                         className="small_logo"
-                        src={require("../../static/img/pure_logo.jpg")}
+                        src={require("../assets/img/pure_logo.jpg")}
                         data-rjs="2"
                         alt=""
                       />
@@ -543,7 +472,7 @@ export default function Home1() {
                     <div className="image">
                       <img
                         className="small_logo"
-                        src={require("../../static/img/pure_logo.jpg")}
+                        src={require("../assets/img/pure_logo.jpg")}
                         data-rjs="2"
                         alt=""
                       />
@@ -569,166 +498,67 @@ export default function Home1() {
             <div className="col-lg-4 col-sm-6">
               <div className="single-blog-item">
                 <div className="blog-image">
-                  <a href="#">
-                    <img
-                      src={require("../../static/img/blog/blog-1.png")}
-                      alt=""
-                    />
-                  </a>
+                  <Link to="/blog/blog">
+                    <img src={require("../assets/img/blog/blog.png")} alt="" className='news_logo' />
+                  </Link>
                 </div>
-
                 <div className="blog-content">
-                  <a href="#" className="posted">
-                    2020/06/06
-                  </a>
-
+                  <span className="posted">2020/06/06</span>
                   <h3>
-                    <a href="#">杭天祥与小丽结婚公告！</a>
+                    <Link to="/blog/blog">
+                      从省内游到跨省游，漫长的等待，你要准备些什么
+                    </Link>
                   </h3>
-
-                  <a href="#" className="btn-inline">
+                  <Link to="/blog/blog" className="btn-inline">
                     阅读全文
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6">
               <div className="single-blog-item">
                 <div className="blog-image">
-                  <a href="#">
-                    <img
-                      src={require("../../static/img/blog/blog-2.png")}
-                      alt=""
-                    />
-                  </a>
+                  <Link to="/blog/blog1">
+                    <img src={require("../assets/img/blog/blog1.png")} alt=""  className='news_logo'/>
+                  </Link>
                 </div>
 
                 <div className="blog-content">
-                  <a href="#" className="posted">
-                    2020/06/06
-                  </a>
-
+                  <span className="posted">2020/06/06</span>
                   <h3>
-                    <a href="#">龙龙小三成群</a>
+                    <Link to="/blog/blog1">旅行社融合之路</Link>
                   </h3>
-
-                  <a href="#" className="btn-inline">
+                  <Link to="/blog/blog1" className="btn-inline">
                     阅读全文
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6">
               <div className="single-blog-item">
                 <div className="blog-image">
-                  <a href="#">
-                    <img
-                      src={require("../../static/img/blog/blog-3.png")}
-                      alt=""
-                    />
-                  </a>
+                  <Link to="/blog/blog2">
+                    <img src={require("../assets/img/blog/blog2.png")} alt="" className='news_logo'/>
+                  </Link>
                 </div>
                 <div className="blog-content">
-                  <a href="#" className="posted">
-                    2020/06/06
-                  </a>
-
+                  <span className="posted">2020/06/06</span>
                   <h3>
-                    <a href="#">磊磊修成正果，无敌幸福</a>
+                    <Link to="/blog/blog2">旅行社门市是否需要线上经营</Link>
                   </h3>
-
-                  <a href="#" className="btn-inline">
+                  <Link to="/blog/blog2" className="btn-inline">
                     阅读全文
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <footer className="footer c1-bg">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-sm-6">
-              <div className="widget widget_about">
-                <div className="widget-logo">
-                  <img
-                    className="big_logo"
-                    src={require("../../static/img/logo_white.png")}
-                    data-rjs="2"
-                    alt=""
-                  />
-                </div>
-                <div className="about-text">
-                  <p>
-                    上海临行网络科技有限公司
-                    <br />
-                    沪ICP备18018917号 <br />
-                    © 2020 tripintl.com <br />
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="col-lg-4 col-sm-6">
-              <div className="widget widget_newsletter">
-                <div className="widget-title">
-                  <h3>关注我们</h3>
-
-                  <div className="title-border">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-
-                <div className="newsletter-content">
-                  <img
-                    className="footer_qr"
-                    src={require("../../static/img/mpqr.png")}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="widget widget_contact">
-                <div className="widget-title">
-                  <h3>联系我们</h3>
-
-                  <div className="title-border">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-                <div className="contact-content">
-                  <ul className="list-unstyled">
-                    <li>
-                      <i className="fa fa-map-marker"></i>
-                      北京市朝阳区光华路9号天阶大厦24层
-                    </li>
-                    <li>
-                      <i className="fa fa-phone"></i>{" "}
-                      <a href="callto:+8613810248624">
-                        +86 13810248624 | +1 3476039297
-                      </a>
-                    </li>
-                    <li>
-                      <i className="fa fa-envelope"></i>
-                      <a href="mailto:tripintl@tripintl.com">
-                        tripintl@tripintl.com
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <a href="#" class="back-to-top">
-        <i class="fa fa-angle-up"></i>
+      <Footer />
+      <a href="#" className="back-to-top">
+        <i className="fa fa-angle-up"></i>
       </a>
     </div>
   )

@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /(menu|main|owlcarousel)/,
+            test: /(menu|owlcarousel)/,
             use: loaders.null(),
           },
         ],

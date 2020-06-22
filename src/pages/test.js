@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-
+import React from "react"
 import Helmet from "react-helmet"
 
 export default function Test() {
@@ -12,7 +11,7 @@ export default function Test() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <link rel="shortcut icon" href="../../static/favicon.ico"></link>
+        <link rel="shortcut icon" href="../assets/favicon.ico"></link>
        
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
 

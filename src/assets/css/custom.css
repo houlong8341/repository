@@ -130,6 +130,15 @@
 	width: 90px !important;
 }
 
+.big_logo{
+	height: 90px !important;
+}
+
+.news_logo{
+	height: 290px;
+	width: 349px;
+}
+
 .footer_qr{
 	width: 40%;
 	border-radius: 1px;
