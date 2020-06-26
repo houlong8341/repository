@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from "react"
+import { Link, navigate } from "gatsby"
 import Helmet from "react-helmet"
+import lodashFp from "lodash/fp"
+
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "font-awesome/css/font-awesome.min.css"
 import "react-fontawesome"
 import "../assets/css/bootstrap.min.css"
 import "../assets/css/style.css"
 import "../assets/css/custom.css"
-import { Link } from "gatsby"
+
 import { Main } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import { action_saveMobile_get } from "../action/mobile"
+import { action_saveMobile_get, action_blog_gettop3 } from "../action/airtable"
 
 export default function Home1() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
+  const [blogList, setBlogList] = useState([])
   useEffect(() => {
     Main()
+    // action_blog_gettop3().then(blist => {
+    //   if (!lodashFp.isNull(blist)) {
+    //     console.log(blist)
+    //     setBlogList(blist)
+    //   }
+    // })
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
   }
   function onMobileSubmit(e) {
     e.preventDefault()
-    console.log(mobile)
     action_saveMobile_get(mobile)
+    navigate("/comingsoon")
   }
   return (
     <div>
@@ -85,6 +95,8 @@ export default function Home1() {
                 className="brand-logo owl-carousel"
                 data-owl-items="6"
                 data-owl-autoplay="false"
+                data-owl-nav="false"
+                data-owl-dots="false"
                 data-owl-responsive='{"0": {"items": "2"},"575":{"items": "3"},"768": {"items": "4"},"992": {"items": "5"}}'
               >
                 <a href="#" className="single-brand-logo">
@@ -494,22 +506,61 @@ export default function Home1() {
             </div>
           </div>
 
+          {/* <div className="row justify-content-center">
+            {blogList.map(function (blogitem) {
+              return (
+                <div className="col-lg-4 col-sm-6" key={blogitem.id}>
+                  <div className="single-blog-item">
+                    <div className="blog-image">
+                      <Link to="/blog/blog" state={{ id: blogitem.id }}>
+                        <img
+                          src={require("../assets/img/blog/blog.png")}
+                          alt=""
+                          className="news_logo"
+                        />
+                      </Link>
+                    </div>
+                    <div className="blog-content">
+                      <span className="posted">2020/06/06</span>
+                      <h3>
+                        <Link to="/blog/blog" state={{ id: blogitem.id }}>
+                          {blogitem.title}
+                        </Link>
+                      </h3>
+                      <Link
+                        to="/blog/blog"
+                        state={{ id: blogitem.id }}
+                        className="btn-inline"
+                      >
+                        阅读全文
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div> */}
+
           <div className="row justify-content-center">
             <div className="col-lg-4 col-sm-6">
               <div className="single-blog-item">
                 <div className="blog-image">
-                  <Link to="/blog/blog">
-                    <img src={require("../assets/img/blog/blog.png")} alt="" className='news_logo' />
+                  <Link to="/blog/blog0">
+                    <img
+                      src={require("../assets/img/blog/blog.png")}
+                      alt=""
+                      className="news_logo"
+                    />
                   </Link>
                 </div>
                 <div className="blog-content">
                   <span className="posted">2020/06/06</span>
                   <h3>
-                    <Link to="/blog/blog">
+                    <Link to="/blog/blog0">
                       从省内游到跨省游，漫长的等待，你要准备些什么
                     </Link>
                   </h3>
-                  <Link to="/blog/blog" className="btn-inline">
+                  <Link to="/blog/blog0" className="btn-inline">
                     阅读全文
                   </Link>
                 </div>
@@ -519,7 +570,11 @@ export default function Home1() {
               <div className="single-blog-item">
                 <div className="blog-image">
                   <Link to="/blog/blog1">
-                    <img src={require("../assets/img/blog/blog1.png")} alt=""  className='news_logo'/>
+                    <img
+                      src={require("../assets/img/blog/blog1.png")}
+                      alt=""
+                      className="news_logo"
+                    />
                   </Link>
                 </div>
 
@@ -538,7 +593,11 @@ export default function Home1() {
               <div className="single-blog-item">
                 <div className="blog-image">
                   <Link to="/blog/blog2">
-                    <img src={require("../assets/img/blog/blog2.png")} alt="" className='news_logo'/>
+                    <img
+                      src={require("../assets/img/blog/blog2.png")}
+                      alt=""
+                      className="news_logo"
+                    />
                   </Link>
                 </div>
                 <div className="blog-content">

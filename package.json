@@ -15,13 +15,14 @@
   },
   "dependencies": {
     "@typeform/embed": "^0.20.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^2.22.15",
     "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
     "owl.carousel": "^2.3.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-fontawesome": "^1.7.1",
-    "font-awesome":"^4.7.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {

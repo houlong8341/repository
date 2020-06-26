@@ -67,10 +67,11 @@
 }
 .nav_signup{
 	color: #3E4D97;
-	border: 1px solid #3E4D97;
+	border: 1px solid red;/*#3E4D97;*/
 	line-height: 0px!important;
 	padding: 20px 10px;
 	border-radius: 4px;
+	font-weight: 600;
 }
 .nav_signup:hover{
 	border:1px solid #FE5D6D;
@@ -130,6 +131,7 @@
 	width: 90px !important;
 }
 
+/* ray */
 .big_logo{
 	height: 90px !important;
 }
@@ -138,6 +140,50 @@
 	height: 290px;
 	width: 349px;
 }
+
+.col_flex2{
+	flex-grow: 2 !important;
+}
+
+.width100{
+	width: 100% !important;
+}
+
+.nav_right{
+	display: flex;
+	align-items: center!important;
+	justify-content: space-between;
+}
+
+.icp_content{
+	height: 50px;
+	display: flex;
+	align-items: center;    
+	color: #CFCFCF;
+	font-size: 14px;
+}
+
+.footer_style{
+	padding-top: 60px !important;
+	padding-bottom: 0px !important;
+}
+
+.column_contact{
+	font-size: 14px;
+	line-height: 2;
+	color: #CFCFCF;
+}
+
+.column_flex{
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+}
+
+.companyName{
+	margin-left: 10px;
+}
+/*------*/
 
 .footer_qr{
 	width: 40%;

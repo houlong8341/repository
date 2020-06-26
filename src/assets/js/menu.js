@@ -45,10 +45,9 @@ import jQuery from "jquery"
       else cssmenu.addClass("dropdown")
       if (settings.sticky === true) cssmenu.css("position", "fixed")
       let resizeFix = function () {
-        if ($(window).width() > 992) {
+        if ($(window).width() > 974) {
           cssmenu.find("ul").show()
-        }
-        if ($(window).width() < 992) {
+        }else{
           cssmenu.find("ul").hide().removeClass("open")
         }
       }
