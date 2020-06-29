@@ -15,7 +15,6 @@ export default function Footer() {
       $(".footer_column").toggle()
     }
     $(window).on("resize", function (event) {
-      console.log($(window).width())
       if ($(window).width() < 1080) {
         $(".footer_logo").hide()
       } else {
@@ -132,7 +131,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container icp_content">
-        © 2020 tripintl.com 沪ICP备18018917号 <spsn className="companyName">上海临行网络科技有限公司</spsn>
+        © 2020 tripintl.com 沪ICP备18018917号 <span className="companyName">上海临行网络科技有限公司</span>
       </div>
     </footer>
   )

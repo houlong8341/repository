@@ -16,7 +16,15 @@
 import $ from "jquery"
 import "./owlcarousel"
 
-export function Main() {  
+export function Main() { 
+  if ($(window).width() < 1080) {
+    $(".trip_product").addClass("row_before")
+  }
+  $(window).on("resize", function (event) {
+    if ($(window).width() < 1080) {
+      $(".trip_product").addClass("row_before")
+    }
+  })
 
   /*========================
     03: Background Image

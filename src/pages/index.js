@@ -21,12 +21,12 @@ export default function Home1() {
   const [blogList, setBlogList] = useState([])
   useEffect(() => {
     Main()
-    // action_blog_gettop3().then(blist => {
-    //   if (!lodashFp.isNull(blist)) {
-    //     console.log(blist)
-    //     setBlogList(blist)
-    //   }
-    // })
+    action_blog_gettop3().then(blist => {
+      if (!lodashFp.isNull(blist)) {
+        //console.log(blist)
+        setBlogList(blist)
+      }
+    })
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
@@ -233,7 +233,7 @@ export default function Home1() {
       </section>
       <section className="pt_100px pb-140">
         <div className="container">
-          <div className="row justify-content-between align-items-center pb-140">
+          <div className="row pb-140 justify-content-between align-items-center">
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
@@ -263,7 +263,7 @@ export default function Home1() {
             </div>
           </div>
 
-          <div className="row pb-140">
+          <div className="row pb-140 trip_product">
             <div className="col-lg-6">
               <div className="section-title style--two">
                 <div className="title-border">
@@ -297,7 +297,7 @@ export default function Home1() {
             </div>
           </div>
 
-          <div className="row justify-content-between align-items-center">
+          <div className="row pb-140 justify-content-between align-items-center trip_product">
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
@@ -326,7 +326,7 @@ export default function Home1() {
               </a>
             </div>
           </div>
-          <div className="row pt-140">
+          <div className="row  trip_product">
             <div className="col-lg-6">
               <div className="section-title style--two">
                 <div className="title-border">
@@ -506,7 +506,7 @@ export default function Home1() {
             </div>
           </div>
 
-          {/* <div className="row justify-content-center">
+          <div className="row justify-content-center">
             {blogList.map(function (blogitem) {
               return (
                 <div className="col-lg-4 col-sm-6" key={blogitem.id}>
@@ -539,9 +539,9 @@ export default function Home1() {
                 </div>
               )
             })}
-          </div> */}
+          </div>
 
-          <div className="row justify-content-center">
+          {/* <div className="row justify-content-center">
             <div className="col-lg-4 col-sm-6">
               <div className="single-blog-item">
                 <div className="blog-image">
@@ -611,7 +611,7 @@ export default function Home1() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

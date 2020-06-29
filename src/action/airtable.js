@@ -35,7 +35,7 @@ export async function action_blog_getdetail(id) {
   let result=null;
   try {
     const response = await axios.get(blog_detail + "?id=" + id)
-    console.log(response)
+    //console.log(response)
     if (response && !lodashFp.isNull(response.data)) {
       result = response.data
     }

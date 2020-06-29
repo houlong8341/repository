@@ -13,10 +13,9 @@ export default function Blog({ location }) {
 
   useEffect(() => {
     if (location && location.state.id) {
-      console.log(location.state.id)
       action_blog_getdetail(location.state.id).then(binfo => {
         if (!lodashFp.isNull(binfo)) {
-          console.log(binfo)
+          //console.log(binfo)
           setBlogDetail(binfo)
           setImgPath(require(`../../assets/img/blog/${binfo.imgpath}`))
           $(".preloader").fadeOut(1000)

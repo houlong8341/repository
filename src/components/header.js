@@ -26,7 +26,6 @@ export default function Header() {
       $(".nav_signup").hide()
     }
     $(window).on("resize", function (event) {
-      console.log($(window).width())
       if ($(window).width() > 974) {
         //$(".menu-trigger").addClass("d-none")
         $(".nav-wrapper").addClass("active")
