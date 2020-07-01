@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link, navigate } from "gatsby"
 import $ from "jquery"
 import "../assets/js/menu"
 
@@ -78,22 +79,14 @@ export default function Header() {
                 <div className="nav-wrapper">
                   <ul className="nav align-items-center">
                     <li className="current-menu-item">
-                      <a href="index.html">首页</a>
+                      <Link to="/">首页</Link>
                     </li>
                     <li>
-                      <a href="about.html">卖产品</a>
+                      <Link to="/aggregator">卖产品</Link>
                     </li>
 
                     <li className="menu-item-has-children">
-                      <a href="#">买产品</a>
-                      <ul className="sub-menu">
-                        <li>
-                          <a href="service.html">service</a>
-                        </li>
-                        <li>
-                          <a href="service-details.html">service details</a>
-                        </li>
-                      </ul>
+                      <Link to="/ugs">买产品</Link>                      
                     </li>
                     <li className="menu-item-has-children">
                       <a href="#">经营零售</a>
@@ -101,24 +94,10 @@ export default function Header() {
                         <li>
                           <a href="coming-soon.html">Coming Soon</a>
                         </li>
-                        <li>
-                          <a href="404.html">404</a>
-                        </li>
                       </ul>
                     </li>
-                    <li className="menu-item-has-children">
-                      <a href="#">旅点资讯</a>
-                      <ul className="sub-menu">
-                        <li>
-                          <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                          <a href="blog-with-sidebar.html">Blog with Sidebar</a>
-                        </li>
-                        <li>
-                          <a href="blog-details.html">blog details</a>
-                        </li>
-                      </ul>
+                    <li>
+                      <Link to="/blog/list">旅点资讯</Link>
                     </li>
                   </ul>
                 </div>

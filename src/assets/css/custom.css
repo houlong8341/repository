@@ -106,8 +106,8 @@
   width: 80%;
 }
 
-.service_inp_cont_mobile {
-  width: 100%;
+.service_inpt_cont_mobile {
+  width: 100% !important;
   margin-top: 40px;
 }
 
@@ -199,4 +199,26 @@
   width: 40%;
   border-radius: 1px;
   margin-bottom: 10px;
+}
+
+
+.padding_none{
+	padding: 40px !important;
+}
+
+.fc_white{
+	color: #FFF !important;
+}
+
+
+.signup_bg{
+	padding: 60px 0 !important;
+	background-color: #3E4D97;
+}
+
+.w_80{
+	width: 80%;
+}
+.m0a{
+	margin: 0 auto;
 }

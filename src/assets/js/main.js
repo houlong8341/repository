@@ -23,6 +23,8 @@ export function Main() {
   $(window).on("resize", function (event) {
     if ($(window).width() < 1080) {
       $(".trip_product").addClass("row_before")
+    }else{
+      $(".trip_product").removeClass("row_before")
     }
   })
 

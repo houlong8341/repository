@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react"
 import Helmet from "react-helmet"
 import lodashFp from "lodash/fp"
+import $ from "jquery"
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import { action_blog_getdetail } from "../../action/airtable"
-import $ from "jquery"
 
 export default function Blog({ location }) {
   const [windowsWidth] = useState(100)
   const [blogdetail, setBlogDetail] = useState({})
+  //因为异步原因，将img路径绑定
   const [imgpath, setImgPath] = useState()
 
   useEffect(() => {
@@ -28,10 +29,10 @@ export default function Blog({ location }) {
       <Helmet>
         <title>旅点资讯</title>
       </Helmet>
-      <Header />
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
+      <Header />
       <section className="pt-120 pb-140">
         <div className="container">
           <div className="row">
@@ -69,7 +70,7 @@ export default function Blog({ location }) {
                     <li>
                       <a href="#">
                         <img
-                          src="assets/img/icon/sw-1.svg"
+                          src={require("../../assets/img/icon/sw-1.svg")}
                           className="svg"
                           alt=""
                         />{" "}
@@ -79,7 +80,7 @@ export default function Blog({ location }) {
                     <li>
                       <a href="#">
                         <img
-                          src="assets/img/icon/sw-2.svg"
+                          src={require("../../assets/img/icon/sw-2.svg")}
                           className="svg"
                           alt=""
                         />{" "}
@@ -89,7 +90,7 @@ export default function Blog({ location }) {
                     <li>
                       <a href="#">
                         <img
-                          src="assets/img/icon/sw-3.svg"
+                          src={require("../../assets/img/icon/sw-3.svg")}
                           className="svg"
                           alt=""
                         />{" "}
@@ -99,7 +100,7 @@ export default function Blog({ location }) {
                     <li>
                       <a href="#">
                         <img
-                          src="assets/img/icon/sw-4.svg"
+                          src={require("../../assets/img/icon/sw-4.svg")}
                           className="svg"
                           alt=""
                         />{" "}
@@ -109,7 +110,7 @@ export default function Blog({ location }) {
                     <li>
                       <a href="#">
                         <img
-                          src="assets/img/icon/sw-5.svg"
+                          src={require("../../assets/img/icon/sw-5.svg")}
                           className="svg"
                           alt=""
                         />{" "}

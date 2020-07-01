@@ -861,6 +861,10 @@ textarea.theme-input-style {
   cursor: not-allowed;
   opacity: .5;
 }
+.pagination li.nav-btn span.disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
 
 /* Blockquote */
 blockquote {

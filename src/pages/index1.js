@@ -164,8 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="pt-80 pb-80 light-bg">
+      <section className="">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -175,72 +174,183 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col-lg-4">
+              <Link to="/ugs">
+                <div className="index-single-service single-service">
+                  <div className="icon index_ss_icon">
+                    <img
+                      src={require("../assets/img/icon/service-1.svg")}
+                      className="svg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="content">
+                    <h3 className="fs_20">旅点UGS</h3>
+                    <p className="fs_16 fc_gt">一站式对接多家 OTA 投放产品</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-lg-4">
+              <a href="service-details.html">
+                <div className="index-single-service single-service">
+                  <div className="icon index_ss_icon">
+                    <img
+                      src={require("../assets/img/icon/service-2.svg")}
+                      className="svg"
+                      alt=""
+                    />
+                  </div>
 
-          <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="padding_none single-pricing-table text-center">
-                <div className="pt-header">
-                  <div className="icon">
-                    <img src={require("../assets/img/icon/basic.png")} alt="" />
+                  <div className="content">
+                    <h3 className="fs_20">旅.采购</h3>
+                    <p className="fs_16 fc_gt">全球旅游资源同业交易平台</p>
                   </div>
-                  <h2 className="title">旅点采购</h2>
                 </div>
-                <div className="pt-body">
-                  <ul className="list-unstyled list-check">
-                    <li>全球旅游资源同业交易平台</li>
-                    <li>超过700,000+全球酒店</li>
-                    <li>实时价格和库存, 随时预定</li>
-                    <li>网页手机版，微信小程序</li>
-                    <li>支付宝，微信，额度支付</li>
-                  </ul>
+              </a>
+            </div>
+            <div className="col-lg-4">
+              <a href="service-details.html">
+                <div className="index-single-service single-service">
+                  <div className="icon index_ss_icon">
+                    <img
+                      src={require("../assets/img/icon/service-3.svg")}
+                      className="svg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="content">
+                    <h3 className="fs_20">旅.零售</h3>
+                    <p className="fs_16 fc_gt">为旅游门市提供线上经营工具</p>
+                  </div>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
-                  了解关于旅.采购
-                </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="pt_100px pb-140">
+        <div className="container">
+          <div className="row pb-140 justify-content-between align-items-center">
+            <div className="col-lg-5">
+              <div className="mb-50 mb-lg-0">
+                <img
+                  src={require("../assets/img/feature/feature1.svg")}
+                  alt=""
+                />
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="padding_none single-pricing-table text-center">
-                <div className="pt-header">
-                  <div className="icon">
-                    <img src={require("../assets/img/icon/pro.png")} alt="" />
-                  </div>
-                  <h2 className="title">旅点UGS</h2>
+            <div className="col-lg-6">
+              <div className="section-title style--two">
+                <div className="title-border">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <div className="pt-body">
-                  <ul className="list-unstyled list-check">
-                    <li>一站式对接多家OTA</li>
-                    <li>投放当地玩乐，酒店等多种产品</li>
-                    <li>旅点已开通多家OTA</li>
-                    <li>一站式搞定全渠道库存</li>
-                    <li>实时发布产品，实时更新库存</li>
-                  </ul>
+                <h2>您卖产品，旅点准备渠道</h2>
+              </div>
+              <ul className="pb-30 list-check">
+                <li>可售卖当地玩乐，机票，酒店等多种旅游产品</li>
+                <li>无需您开通对接OTA，旅点已开通多家OTA</li>
+                <li>旅点后台，全部搞定，无需单独更新每一个OTA</li>
+                <li>全技术对接，实时发布产品，实时更新库存</li>
+              </ul>
+              <a href="#" className="btn-inline mt-30 fc_red">
+                了解关于旅点UGS
+              </a>
+            </div>
+          </div>
+
+          <div className="row pb-140 trip_product">
+            <div className="col-lg-6">
+              <div className="section-title style--two">
+                <div className="title-border">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
-                  了解关于旅.采购
-                </a>
+                <h2>您带上需求，旅点为您找资源</h2>
+                <ul className="pb-30 list-check">
+                  <li></li>
+                  <li>
+                    超过700,000+全球酒店，350+航空公司，1200个目的地的产品资源
+                  </li>
+                  <li>客户需求不等人，1秒获取实时价格和库存</li>
+                  <li>网页，手机版，微信小程序，随时随地预定</li>
+                  <li>便捷支付方式，支持支付宝，微信，额度支付</li>
+                </ul>
+              </div>
+
+              <a href="#" className="btn-inline mt-30 fc_red">
+                了解关于旅.采购
+              </a>
+            </div>
+            <div className="col-lg-6 order-first order-lg-last">
+              <div className="mb-50 mb-lg-0">
+                <img
+                  src={require("../assets/img/feature/feature2.svg")}
+                  alt=""
+                />
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="padding_none single-pricing-table text-center">
-                <div className="pt-header">
-                  <div className="icon">
-                    <img src={require("../assets/img/icon/pro.png")} alt="" />
-                  </div>
-                  <h2 className="title">旅点零售</h2>
+          </div>
+
+          <div className="row pb-140 justify-content-between align-items-center trip_product">
+            <div className="col-lg-5">
+              <div className="mb-50 mb-lg-0">
+                <img
+                  src={require("../assets/img/feature/feature3.svg")}
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="section-title style--two">
+                <div className="title-border">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <div className="pt-body">
-                  <ul className="list-unstyled list-check">
-                    <li>旅行社新零售经营工具</li>
-                    <li>获得自己的网站和小程序</li>
-                    <li>多种线上营销工具</li>
-                    <li>各类经营工具提高效率</li>
-                    <li>激活现有客户群体</li>
-                  </ul>
+                <h2>您经营线下，旅点为您做线上，</h2>
+              </div>
+
+              <ul className="list-check">
+                <li>获得自己的网站和小程序</li>
+                <li>多种线上营销工具</li>
+                <li>各类经营工具提高效率</li>
+              </ul>
+              <a href="#" className="btn-inline mt-30 fc_red">
+                了解关于旅.零售
+              </a>
+            </div>
+          </div>
+          <div className="row  trip_product">
+            <div className="col-lg-6">
+              <div className="section-title style--two">
+                <div className="title-border">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
-                  了解关于旅.采购
-                </a>
+                <h2>API及其他定制方案</h2>
+                <p>
+                  已经有自己的网站，只想要产品资源对接？希望通过API供应产品给旅点的渠道？想要SDK合作？有特殊需求希望旅点为您开发？OK.没问题.
+                  旅点提供弹性极大且稳定的API，有专属的技术对接团队提供专属服务，不论您的需求是技术还是产品，我们都将尽力为您解决.
+                </p>
+              </div>
+
+              <a href="#" className="btn-inline mt-10">
+                联系我们
+              </a>
+            </div>
+            <div className="col-lg-6 order-first order-lg-last">
+              <div className="mb-50 mb-lg-0">
+                <img
+                  src={require("../assets/img/feature/feature2.svg")}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -249,7 +359,7 @@ export default function Home() {
 
       <section
         id="Signup"
-        className="d-flex align-items-center justify-content-center signup_bg pt-5 pb-5 pb-lg-0 pt-lg-0"
+        className="d-flex align-items-center justify-content-center pt-5 pb-5 pb-lg-0 pt-lg-0"
       >
         <div className="container">
           <div className="row align-items-center">
@@ -266,15 +376,17 @@ export default function Home() {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px fc_white">抢先体验，公测招募中</h1>
-                <ul className="list-check fc_white">
+                <h1 className="fs_34px">抢先体验，公测招募中</h1>
+
+                <p>旅点正在积极寻求您的体验反馈~ </p>
+                <ul className="list-check">
                   <li>抢先体验30天</li>
                   <li>公测期间免佣金，免服务费</li>
                   <li>前100名公测后90天可享受免佣金，免手续费</li>
                 </ul>
 
                 <div className="search-form mt-20">
-                  <p className="fc_white">提交联系方式，加入公测~</p>
+                  <p>提交联系方式，加入公测~</p>
                   <div className="theme-input-group">
                     <form onSubmit={onMobileSubmit}>
                       <input
@@ -295,37 +407,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="pt-120 pb-80">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="section-title text-center">
-                <h2>API及其他定制方案合作</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row w_80 m0a">
-            <div className="col-lg-6">
-              <ul className="list-check mb-3 pb-1 mb-lg-0 pb-lg-0">
-                <li>弹性极大且稳定的产品资源API</li>
-                <li>量身定制开发方案</li>
-                <li>自架服务器SaaS方案</li>
-                <li>各类工具SDK合作方案</li>
-              </ul>
-            </div>
-            <div className="col-lg-6">
-              <ul className="list-check">
-                <li>技术团队对接提供专属服务</li>
-                <li>产品经理和客户沟通实际需求</li>
-                <li>弹性合作模式，谁说技术开发一定很贵？</li>
-                <li>完善的售后服务，迭代更新不停止</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="pt-140 ">
         <div className="container">
           <div className="row">
@@ -426,14 +507,14 @@ export default function Home() {
           </div>
 
           <div className="row justify-content-center">
-            {blogList.map(function (blogitem,index) {
+            {blogList.map(function (blogitem) {
               return (
                 <div className="col-lg-4 col-sm-6" key={blogitem.id}>
                   <div className="single-blog-item">
                     <div className="blog-image">
                       <Link to="/blog/blog" state={{ id: blogitem.id }}>
                         <img
-                          src={require(`../assets/img/blog/blog${index}.png`)}
+                          src={require("../assets/img/blog/blog.png")}
                           alt=""
                           className="news_logo"
                         />

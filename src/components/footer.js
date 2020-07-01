@@ -108,6 +108,7 @@ export default function Footer() {
                 <img
                   className="footer_qr"
                   src={require("../assets/img/mpqr.png")}
+                  alt=""
                 />
               </div>
             </div>
@@ -122,6 +123,7 @@ export default function Footer() {
             <img
               className="footer_qr"
               src={require("../assets/img/mpqr.png")}
+              alt=""
             />
             <div className="column_contact">
               <i className="fa fa-phone"></i>{" "}
