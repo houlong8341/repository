@@ -82,11 +82,11 @@ export default function Header() {
                       <Link to="/">首页</Link>
                     </li>
                     <li>
-                      <Link to="/aggregator">卖产品</Link>
+                      <Link to="/ugs">卖产品</Link>
                     </li>
 
                     <li className="menu-item-has-children">
-                      <Link to="/ugs">买产品</Link>                      
+                      <Link to="/aggregator">买产品</Link>                      
                     </li>
                     <li className="menu-item-has-children">
                       <a href="#">经营零售</a>

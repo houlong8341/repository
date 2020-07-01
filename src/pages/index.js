@@ -13,20 +13,20 @@ import "../assets/css/custom.css"
 import { Main } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import { action_saveMobile_get, action_blog_gettop3 } from "../action/airtable"
+import { action_saveMobile_get } from "../action/airtable"
 
 export default function Home() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
-  const [blogList, setBlogList] = useState([])
+  //const [blogList, setBlogList] = useState([])
   useEffect(() => {
     Main()
-    action_blog_gettop3().then(blist => {
-      if (!lodashFp.isNull(blist)) {
-        //console.log(blist)
-        setBlogList(blist)
-      }
-    })
+    // action_blog_gettop3().then(blist => {
+    //   if (!lodashFp.isNull(blist)) {
+    //     //console.log(blist)
+    //     setBlogList(blist)
+    //   }
+    // })
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
@@ -326,7 +326,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-140 ">
+      <section className="pt-140 pb-60">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -415,12 +415,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-140 pb-90 light-bg">
+      {/* <section className="pt-140 pb-90 light-bg">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title text-center">
-                <h2>旅典信息</h2>
+                <h2>旅点资讯</h2>
               </div>
             </div>
           </div>
@@ -459,80 +459,8 @@ export default function Home() {
               )
             })}
           </div>
-
-          {/* <div className="row justify-content-center">
-            <div className="col-lg-4 col-sm-6">
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link to="/blog/blog0">
-                    <img
-                      src={require("../assets/img/blog/blog.png")}
-                      alt=""
-                      className="news_logo"
-                    />
-                  </Link>
-                </div>
-                <div className="blog-content">
-                  <span className="posted">2020/06/06</span>
-                  <h3>
-                    <Link to="/blog/blog0">
-                      从省内游到跨省游，漫长的等待，你要准备些什么
-                    </Link>
-                  </h3>
-                  <Link to="/blog/blog0" className="btn-inline">
-                    阅读全文
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link to="/blog/blog1">
-                    <img
-                      src={require("../assets/img/blog/blog1.png")}
-                      alt=""
-                      className="news_logo"
-                    />
-                  </Link>
-                </div>
-
-                <div className="blog-content">
-                  <span className="posted">2020/06/06</span>
-                  <h3>
-                    <Link to="/blog/blog1">旅行社融合之路</Link>
-                  </h3>
-                  <Link to="/blog/blog1" className="btn-inline">
-                    阅读全文
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
-              <div className="single-blog-item">
-                <div className="blog-image">
-                  <Link to="/blog/blog2">
-                    <img
-                      src={require("../assets/img/blog/blog2.png")}
-                      alt=""
-                      className="news_logo"
-                    />
-                  </Link>
-                </div>
-                <div className="blog-content">
-                  <span className="posted">2020/06/06</span>
-                  <h3>
-                    <Link to="/blog/blog2">旅行社门市是否需要线上经营</Link>
-                  </h3>
-                  <Link to="/blog/blog2" className="btn-inline">
-                    阅读全文
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <a href="#" className="back-to-top">
