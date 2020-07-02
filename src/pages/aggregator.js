@@ -72,7 +72,7 @@ export default function UGS() {
                   </p>
                 </div>
               </div>
-              <a href="http://www.b2b.intltrip.com/Member/RegView.html" class="b2b_btn red_btn">加入公测</a>
+              <a href="http://www.b2b.intltrip.com" class="b2b_btn red_btn">开始体验</a>
             </div>
 
             <div className="col-lg-5">
@@ -265,11 +265,11 @@ export default function UGS() {
                 <h1 className="fs_34px fc_white">抢先体验，公测招募中</h1>
                 <ul className="list-check fc_white">
                   <li>抢先预订国内酒店</li>
-                  <li>公测期间免佣金，价格更低更有优势</li>
-                  <li>公测期间各类活动进行中</li>
-                  <li>公测参与者均获得无门槛100元抵用券</li>
+                  <li>价格更低更有优势</li>
+                  <li>各类活动进行中</li>
+                  <li>体验版参与者均获得无门槛100元抵用金</li>
                 </ul>
-                <a href="http://www.b2b.intltrip.com/Member/RegView.html" class="b2b_btn red_btn">加入公测</a>
+                <a href="http://www.b2b.intltrip.com" class="b2b_btn red_btn">开始体验</a>
               </div>
             </div>
           </div>

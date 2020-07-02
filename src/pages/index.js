@@ -18,15 +18,8 @@ import { action_saveMobile_get } from "../action/airtable"
 export default function Home() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
-  //const [blogList, setBlogList] = useState([])
   useEffect(() => {
     Main()
-    // action_blog_gettop3().then(blist => {
-    //   if (!lodashFp.isNull(blist)) {
-    //     //console.log(blist)
-    //     setBlogList(blist)
-    //   }
-    // })
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
@@ -415,53 +408,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="pt-140 pb-90 light-bg">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="section-title text-center">
-                <h2>旅点资讯</h2>
-              </div>
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            {blogList.map(function (blogitem,index) {
-              return (
-                <div className="col-lg-4 col-sm-6" key={blogitem.id}>
-                  <div className="single-blog-item">
-                    <div className="blog-image">
-                      <Link to="/blog/blog" state={{ id: blogitem.id }}>
-                        <img
-                          src={require(`../assets/img/blog/blog${index}.png`)}
-                          alt=""
-                          className="news_logo"
-                        />
-                      </Link>
-                    </div>
-                    <div className="blog-content">
-                      <span className="posted">2020/06/06</span>
-                      <h3>
-                        <Link to="/blog/blog" state={{ id: blogitem.id }}>
-                          {blogitem.title}
-                        </Link>
-                      </h3>
-                      <Link
-                        to="/blog/blog"
-                        state={{ id: blogitem.id }}
-                        className="btn-inline"
-                      >
-                        阅读全文
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section> */}
-
+      
       <Footer />
       <a href="#" className="back-to-top">
         <i className="fa fa-angle-up"></i>
