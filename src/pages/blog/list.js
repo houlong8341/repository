@@ -58,7 +58,7 @@ export default function List() {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header />
+      <Header index={4}/>
       <section className="pt-140 pb-100">
         <div className="container">
           <div className="row">

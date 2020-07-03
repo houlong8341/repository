@@ -26,8 +26,10 @@ export default function Home() {
   }
   function onMobileSubmit(e) {
     e.preventDefault()
-    action_saveMobile_get(mobile)
-    navigate("/comingsoon")
+    if (mobile) {
+      action_saveMobile_get(mobile)
+      navigate("/comingsoon")
+    }
   }
   return (
     <div>
@@ -40,7 +42,7 @@ export default function Home() {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header />
+      <Header index={0}/>
 
       <div className="banner">
         <div className="banner_slider">
@@ -408,7 +410,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       <Footer />
       <a href="#" className="back-to-top">
         <i className="fa fa-angle-up"></i>

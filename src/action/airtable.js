@@ -16,7 +16,7 @@ const blog_page =
 export async function action_saveMobile_get(mobile) {
   try {
     const response = await axios.get(mobile_insert + "?mobile=" + mobile)
-    console.log(response)
+    //console.log(response)
   } catch (error) {
     console.error(error)
   }

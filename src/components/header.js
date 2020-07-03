@@ -3,13 +3,12 @@ import { Link, navigate } from "gatsby"
 import $ from "jquery"
 import "../assets/js/menu"
 
-export default function Header() {
+export default function Header(props) {
   const [header] = useState(1)
   useEffect(() => {
-    $('ul.nav li a[href="#"]').on("click", function (event) {
-      event.preventDefault()
-    })
-
+    $($('ul.nav li')[props.index]).addClass('current-menu-item')
+    $($('ul.nav li')[props.index]).siblings().removeClass('current-menu-item')
+    
     /* Menu Maker */
     $(".nav-wrapper").menumaker({
       title: "<span></span>",
@@ -85,10 +84,10 @@ export default function Header() {
                       <Link to="/ugs">UGS</Link>
                     </li>
 
-                    <li className="menu-item-has-children">
+                    <li>
                       <Link to="/aggregator">采购</Link>                      
                     </li>
-                    <li className="menu-item-has-children">
+                    <li>
                       <Link to="/retail">零售</Link>                      
                     </li>
                     <li>
@@ -96,9 +95,9 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-                <a className="nav_signup" href="contact.html">
+                {/* <a className="nav_signup" href="contact.html">
                   加入公测
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import Helmet from "react-helmet"
-import $ from "jquery"
 
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "font-awesome/css/font-awesome.min.css"
@@ -10,6 +9,7 @@ import "../assets/css/bootstrap.min.css"
 import "../assets/css/style.css"
 import "../assets/css/custom.css"
 
+import { Default } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import { action_saveMobile_get } from "../action/airtable"
@@ -18,26 +18,17 @@ export default function Retail() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
   useEffect(() => {
-    $(".preloader").fadeOut(1000)
-    if ($(window).width() < 1080) {
-      console.log($(window).width())
-      $(".service_inpt_cont_web").addClass("service_inpt_cont_mobile")
-    }
-    $(window).on("resize", function (event) {
-      if ($(window).width() < 1080) {
-        $(".service_inpt_cont_web").addClass("service_inpt_cont_mobile")
-      } else {
-        $(".service_inpt_cont_web").removeClass("service_inpt_cont_mobile")
-      }
-    })
+    Default()    
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
   }
   function onMobileSubmit(e) {
     e.preventDefault()
-    action_saveMobile_get(mobile)
-    navigate("/comingsoon")
+    if (mobile) {
+      action_saveMobile_get(mobile)
+      navigate("/comingsoon")
+    }
   }
   return (
     <div>
@@ -50,7 +41,7 @@ export default function Retail() {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header />
+      <Header index={3}/>
 
       <section className="pt-140">
         <div className="container">

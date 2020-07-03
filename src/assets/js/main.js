@@ -16,30 +16,7 @@
 import $ from "jquery"
 import "./owlcarousel"
 
-export function Main() { 
-  if ($(window).width() < 1080) {
-    $(".trip_product").addClass("row_before")
-  }
-  $(window).on("resize", function (event) {
-    if ($(window).width() < 1080) {
-      $(".trip_product").addClass("row_before")
-    }else{
-      $(".trip_product").removeClass("row_before")
-    }
-  })
-
-  /*========================
-    03: Background Image
-    ==========================*/
-  var $bgImg = $("[data-bg-img]")
-  $bgImg
-    .css("background-image", function () {
-      return 'url("' + $(this).data("bg-img") + '")'
-    })
-    .removeAttr("data-bg-img")
-    .addClass("bg-img")
-
-  
+export function Main() {
   /*==================================
       05: Check Data
       ====================================*/
@@ -73,6 +50,10 @@ export function Main() {
     })
   })
 
+  Default();
+}
+
+export function Default() {
   /*==================================
     07: Changing svg color 
     ====================================*/
@@ -120,13 +101,13 @@ export function Main() {
   })
 
   /*==================================
-    09: Preloader 
-    ====================================*/
+      09: Preloader 
+      ====================================*/
   $(".preloader").fadeOut(1000)
 
   /*============================================
-    11: Back to top button
-    ==============================================*/
+      11: Back to top button
+      ==============================================*/
   var $backToTopBtn = $(".back-to-top")
 
   if ($backToTopBtn.length) {

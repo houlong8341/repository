@@ -10,6 +10,7 @@ import "../assets/css/bootstrap.min.css"
 import "../assets/css/style.css"
 import "../assets/css/custom.css"
 
+import { Default } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import { action_saveMobile_get } from "../action/airtable"
@@ -18,9 +19,8 @@ export default function UGS() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
   useEffect(() => {
-    $(".preloader").fadeOut(1000)
+    Default()
     if ($(window).width() < 1080) {
-      console.log($(window).width())
       $(".service_inpt_cont_web").addClass("service_inpt_cont_mobile")
     }
     $(window).on("resize", function (event) {
@@ -36,8 +36,10 @@ export default function UGS() {
   }
   function onMobileSubmit(e) {
     e.preventDefault()
-    action_saveMobile_get(mobile)
-    navigate("/comingsoon")
+    if (mobile) {
+      action_saveMobile_get(mobile)
+      navigate("/comingsoon")
+    }
   }
   return (
     <div>
@@ -50,7 +52,7 @@ export default function UGS() {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header />
+      <Header index={1}/>
       <section>
         <div className="pt_100px container">
           <div className="row align-items-center">
