@@ -8,14 +8,13 @@ export default function Header(props) {
   useEffect(() => {
     $($('ul.nav li')[props.index]).addClass('current-menu-item')
     $($('ul.nav li')[props.index]).siblings().removeClass('current-menu-item')
-    
+
     /* Menu Maker */
     $(".nav-wrapper").menumaker({
       title: "<span></span>",
       format: "multitoggle",
     })
     if ($(window).width() > 974) {
-      //$(".menu-trigger").toggleClass("d-none")
       $(".nav-wrapper").toggleClass("active")
       $(".main-menu").toggleClass("justify-content-between")
     } else {
@@ -27,13 +26,11 @@ export default function Header(props) {
     }
     $(window).on("resize", function (event) {
       if ($(window).width() > 974) {
-        //$(".menu-trigger").addClass("d-none")
         $(".nav-wrapper").addClass("active")
         $(".main-menu").removeClass("justify-content-end")
         $(".main-menu").addClass("justify-content-between")
         $(".nav_signup").show()
       } else {
-        //$(".menu-trigger").removeClass("d-none")
         $(".nav-wrapper").removeClass("active")
         $(".main-menu").removeClass("justify-content-between")
         $(".main-menu").addClass("justify-content-end")
@@ -72,9 +69,6 @@ export default function Header(props) {
             </div>
             <div className="col order-last col_flex2">
               <div className="main-menu d-flex align-items-center">
-                {/* <div className="menu-trigger">
-                  <span></span>
-                </div> */}
                 <div className="nav-wrapper">
                   <ul className="nav align-items-center">
                     <li className="current-menu-item">
@@ -95,9 +89,9 @@ export default function Header(props) {
                     </li>
                   </ul>
                 </div>
-                {/* <a className="nav_signup" href="contact.html">
-                  加入公测
-                </a> */}
+                <Link className="nav_signup" to="/ugs">
+                  加入UGS公测
+                </Link>
               </div>
             </div>
           </div>
