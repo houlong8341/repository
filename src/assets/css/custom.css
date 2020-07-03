@@ -223,12 +223,13 @@
 	margin: 0 auto;
 }
 
-html{
-	font-family: Microsoft YaHei, Helvetica Neue, "Helvetica Neue", Microsoft JhengHei, Helvetica, Arial, sans-serif, Helvetica !important;
-}
 .b2b_btn{
 	padding: 9px 28px;
 	color: #FFF !important;
   margin-top: 25px;
   display: inline-block;
+}
+
+.ta-c{
+	text-align: center;
 }

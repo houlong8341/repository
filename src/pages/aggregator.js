@@ -72,7 +72,7 @@ export default function UGS() {
                   </p>
                 </div>
               </div>
-              <a href="http://www.b2b.intltrip.com" class="b2b_btn red_btn">开始体验</a>
+              <a href="http://www.b2b.intltrip.com" className="b2b_btn red_btn">开始体验</a>
             </div>
 
             <div className="col-lg-5">
@@ -269,7 +269,7 @@ export default function UGS() {
                   <li>各类活动进行中</li>
                   <li>体验版参与者均获得无门槛100元抵用金</li>
                 </ul>
-                <a href="http://www.b2b.intltrip.com" class="b2b_btn red_btn">开始体验</a>
+                <a href="http://www.b2b.intltrip.com" className="b2b_btn red_btn">开始体验</a>
               </div>
             </div>
           </div>

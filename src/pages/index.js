@@ -210,7 +210,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <a href="#" className="btn-inline mt-30 fc_red">
-                  了解关于旅.采购
+                  了解关于旅.UGS
                 </a>
               </div>
             </div>
@@ -232,7 +232,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <a href="#" className="btn-inline mt-30 fc_red">
-                  了解关于旅.采购
+                  了解关于旅.零售
                 </a>
               </div>
             </div>
