@@ -1006,8 +1006,8 @@ blockquote:after {
    02.2: Animations
    ********************* */
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
@@ -1702,7 +1702,7 @@ blockquote:after {
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 @media only screen and (max-width: 479px) {
