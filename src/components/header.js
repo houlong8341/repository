@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react"
 import { Link, navigate } from "gatsby"
 import $ from "jquery"
 import "../assets/js/menu"
+import { goSignUp } from "../assets/js/main"
 
 export default function Header(props) {
   const [header] = useState(1)
   useEffect(() => {
-    $($('ul.nav li')[props.index]).addClass('current-menu-item')
-    $($('ul.nav li')[props.index]).siblings().removeClass('current-menu-item')
+    $($("ul.nav li")[props.index]).addClass("current-menu-item")
+    $($("ul.nav li")[props.index]).siblings().removeClass("current-menu-item")
 
     /* Menu Maker */
     $(".nav-wrapper").menumaker({
@@ -21,7 +22,7 @@ export default function Header(props) {
       $(".main-menu").toggleClass("justify-content-end")
       $(".nav_signup").hide()
     }
-    if($(window).width() < 1080){
+    if ($(window).width() < 1080) {
       $(".nav_signup").hide()
     }
     $(window).on("resize", function (event) {
@@ -36,9 +37,9 @@ export default function Header(props) {
         $(".main-menu").addClass("justify-content-end")
         $(".nav_signup").hide()
       }
-      if($(window).width() < 1080){
+      if ($(window).width() < 1080) {
         $(".nav_signup").hide()
-      }else{
+      } else {
         $(".nav_signup").show()
       }
     })
@@ -52,6 +53,15 @@ export default function Header(props) {
       }
     })
   }, [header])
+  function onJoin() {
+    let signUp = document.getElementById("Signup")
+    if (signUp) {
+      goSignUp()
+    } else {
+      //关键：将a标签不能有href，替换为事件处理机制
+      navigate("/", { state: { signUp: true } })
+    }
+  }
   return (
     <header className="header">
       <div className="header-main">
@@ -79,19 +89,22 @@ export default function Header(props) {
                     </li>
 
                     <li>
-                      <Link to="/aggregator">采购</Link>                      
+                      <Link to="/aggregator">采购</Link>
                     </li>
                     <li>
-                      <Link to="/retail">零售</Link>                      
+                      <Link to="/retail">零售</Link>
                     </li>
                     <li>
                       <Link to="/blog/list">旅点资讯</Link>
                     </li>
                   </ul>
                 </div>
-                <Link className="nav_signup" to="/ugs">
-                  加入UGS公测
-                </Link>
+                <a                  
+                  className="nav_signup"
+                  onClick={() => onJoin()}
+                >
+                  加入体验
+                </a>
               </div>
             </div>
           </div>

@@ -15,11 +15,11 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import { action_saveMobile_get } from "../action/airtable"
 
-export default function Home() {
+export default function Home({location}) {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
   useEffect(() => {
-    Main()
+    Main(location)
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
@@ -27,7 +27,7 @@ export default function Home() {
   function onMobileSubmit(e) {
     e.preventDefault()
     if (mobile) {
-      action_saveMobile_get(mobile,'UGS')
+      action_saveMobile_get(mobile,'UGS and Retail')
       navigate("/comingsoon")
     }
   }
@@ -264,12 +264,12 @@ export default function Home() {
                 <h1 className="fs_34px fc_white">抢先体验，公测招募中</h1>
                 <ul className="list-check fc_white">
                   <li>抢先体验30天</li>
-                  <li>公测期间免佣金，免服务费</li>
-                  <li>前100名公测后90天可享受免佣金，免手续费</li>
+                  <li>体验期间全部功能免费使用</li>
+                  <li>前100名体验者，可享受90天免佣金、免手续费等高级功能</li>
                 </ul>
 
                 <div className="search-form mt-20">
-                  <p className="fc_white">提交联系方式，加入公测~</p>
+                  {/* <p className="fc_white">提交联系方式，加入公测~</p> */}
                   <div className="theme-input-group">
                     <form onSubmit={onMobileSubmit}>
                       <input
@@ -280,7 +280,7 @@ export default function Home() {
                         onChange={onMobileChange}
                       />
                       <button className="red_btn" type="submit">
-                        加入公测
+                        加入体验
                       </button>
                     </form>
                   </div>

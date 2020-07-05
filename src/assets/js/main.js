@@ -16,7 +16,24 @@
 import $ from "jquery"
 import "./owlcarousel"
 
-export function Main() {
+export function goSignUp() {
+  $("html, body").animate(
+    {
+      scrollTop: $("#Signup").offset().top - 200,
+    },
+    { duration: 500 },
+    { easing: "swing" },
+    function () {
+      return false
+    }
+  )
+}
+
+export function Main(location) {
+  console.log(location)
+  if (location && location.state && location.state.signUp) {
+    goSignUp()
+  }
   /*==================================
       05: Check Data
       ====================================*/
@@ -50,7 +67,7 @@ export function Main() {
     })
   })
 
-  Default();
+  Default()
 }
 
 export function Default() {
