@@ -13,9 +13,9 @@ const blog_page =
   const blog_count =
   "https://1666758333212928.cn-zhangjiakou.fc.aliyuncs.com/2016-08-15/proxy/fun_airtable/fun_blog_count/"
 
-export async function action_saveMobile_get(mobile) {
+export async function action_saveMobile_get(mobile,product) {
   try {
-    const response = await axios.get(mobile_insert + "?mobile=" + mobile)
+    const response = await axios.get(mobile_insert + "?mobile=" + mobile+"&product="+product)
     //console.log(response)
   } catch (error) {
     console.error(error)

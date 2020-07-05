@@ -27,7 +27,7 @@ export default function Home() {
   function onMobileSubmit(e) {
     e.preventDefault()
     if (mobile) {
-      action_saveMobile_get(mobile)
+      action_saveMobile_get(mobile,'UGS')
       navigate("/comingsoon")
     }
   }

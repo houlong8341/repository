@@ -19,6 +19,9 @@
 .fl_l {
   float: left;
 }
+.fw_b{
+	font-weight: bolder;
+}
 .m0a {
   margin: 0 auto;
 }
@@ -232,4 +235,20 @@
 
 .ta-c{
 	text-align: center;
+}
+
+
+.retail_feature_img1{
+	width: 380px;
+}
+
+
+.retail_feature_img2{
+	height: 390px;
+    margin-top: -80px;
+    margin-left: 60px;
+}
+
+.retail_feature_img3{
+	height: 350px;
 }

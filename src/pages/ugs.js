@@ -37,7 +37,7 @@ export default function UGS() {
   function onMobileSubmit(e) {
     e.preventDefault()
     if (mobile) {
-      action_saveMobile_get(mobile)
+      action_saveMobile_get(mobile,'UGS')
       navigate("/comingsoon")
     }
   }
@@ -96,7 +96,7 @@ export default function UGS() {
             <div className="col-lg-5">
               <div className="mt-50 mt-lg-0">
                 <img
-                  src={require("../assets/img/feature/service-1.png")}
+                  src={require("../assets/img/feature/ugs_banner.png")}
                   data-rjs="2"
                   alt=""
                 />
@@ -111,7 +111,7 @@ export default function UGS() {
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature1.svg")}
+                  src={require("../assets/img/feature/ugs1.svg")}
                   alt=""
                 />
               </div>
@@ -144,15 +144,14 @@ export default function UGS() {
                 </div>
                 <h2>有福共享，有难同当</h2>
                 <p>
-                  立即开通试用，无需系统使用费，只有在产品卖出去后，成功结算，旅点才收取佣金。开通和投放产品，更新库存，数据统计等功能，全部收费，
-                  只收佣金。
+                全渠道在线开通，立即开始投放。无需系统使用费，只有在产品卖出去后，成功结算，旅点才收取佣金。<br/>开通和投放产品，更新库存，数据统计等功能，均没有系统使用费，只收成交后的佣金。
                 </p>
               </div>
             </div>
             <div className="col-lg-6 order-first order-lg-last">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature2.svg")}
+                  src={require("../assets/img/feature/ugs2.svg")}
                   alt=""
                 />
               </div>
@@ -163,7 +162,7 @@ export default function UGS() {
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature3.svg")}
+                  src={require("../assets/img/feature/ugs3.svg")}
                   alt=""
                 />
               </div>
@@ -177,7 +176,7 @@ export default function UGS() {
                 </div>
                 <h2>更少的钱，对接更多的个OTA</h2>
                 <p>
-                  无需每次开通OTA都要支付高额的保证金，不论产品种类多与少，不论多少个OTA。旅点已为您降低保证金的需求规模，让您用更少的钱。发票的负担也更轻松简单。{" "}
+                  无需每次开通OTA都要支付高额的保证金，不论产品种类多与少，不论多少个OTA。旅点已为您降低保证金的需求规模，让您用更少的钱。发票的负担也更轻松简单。
                 </p>
               </div>
             </div>

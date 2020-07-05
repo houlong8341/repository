@@ -18,7 +18,7 @@ export default function Retail() {
   const [mobile, setMobile] = useState("")
   const [windowsWidth] = useState(100)
   useEffect(() => {
-    Default()    
+    Default()
   }, [windowsWidth])
   function onMobileChange(event) {
     setMobile(event.target.value)
@@ -26,7 +26,7 @@ export default function Retail() {
   function onMobileSubmit(e) {
     e.preventDefault()
     if (mobile) {
-      action_saveMobile_get(mobile)
+      action_saveMobile_get(mobile,'Retail')
       navigate("/comingsoon")
     }
   }
@@ -41,7 +41,7 @@ export default function Retail() {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header index={3}/>
+      <Header index={3} />
 
       <section className="pt-140">
         <div className="container">
@@ -49,7 +49,7 @@ export default function Retail() {
             <div className="col-lg-6">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/service-details-1.png")}
+                  src={require("../assets/img/retail.svg")}
                   data-rjs="2"
                   alt=""
                 />
@@ -240,13 +240,15 @@ export default function Retail() {
           </div>
         </div>
       </section>
+
       <section className="pt-140 pb-100">
         <div className="container">
           <div className="row justify-content-between align-items-center pb-140">
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature1.svg")}
+                  className="retail_feature_img1"
+                  src={require("../assets/img/feature/retail_feature1.svg")}
                   alt=""
                 />
               </div>
@@ -258,13 +260,21 @@ export default function Retail() {
                   <span></span>
                   <span></span>
                 </div>
-                <h2>一站式工具，让您的零售如虎添翼</h2>
+                <h2>旅点，每一步都在您身后</h2>
                 <p>
-                  您的
-                  不仅可以量身定制专属您的自家官网，让远端客户更能将您列入首选
-                  营销小工具更能让久久没有互动的粉丝从此活络
-                  藉由数据分析，让您更加了解您的客户需求，带入丰厚的营收
-                  零售满足的不只是顾客，更是商家营收获利新渠道
+                  <span className="fw_b">您才是主角</span>
+                  <br />
+                  旅点不对直客，您的网站就是您的网站，您的客人就是您的客人
+                  <br />
+                  这是我们的承诺
+                  <br />
+                  <br />
+                  <span className="fw_b">订单售后无忧</span>
+                  <br />
+                  旅点24小时售后客服团队为您的每一个订单，保驾护航
+                  <br />
+                  只要您有需求，我们都在
+                  <br />
                 </p>
               </div>
             </div>
@@ -278,24 +288,26 @@ export default function Retail() {
                   <span></span>
                   <span></span>
                 </div>
-                <h2>全渠道结合，很简单</h2>
+                <h2>一站式工具，让您只需专心经营</h2>
+
                 <p>
-                  线下的客户，线上微信经营
+                  <span className="fw_b">让工具为您除去繁琐</span>
                   <br />
-                  线上的流量，线下门市服务
+                  各类经营和营销工具，提高效率，节约时间成本，让您做更多的事
                   <br />
-                  线下的订单，线上进行支付
                   <br />
-                  线上的推广，线下拓展收益
+                  <span className="fw_b">成套模板，极速上手</span>
                   <br />
-                  本应如此，现在更简单
+                  每个工具都具有成套的模板，可快速调整参数，迅速投放
+                  <br />
                 </p>
               </div>
             </div>
             <div className="col-lg-6 order-first order-lg-last">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature2.svg")}
+                  className="retail_feature_img2"
+                  src={require("../assets/img/feature/retail_feature2.svg")}
                   alt=""
                 />
               </div>
@@ -306,7 +318,8 @@ export default function Retail() {
             <div className="col-lg-5">
               <div className="mb-50 mb-lg-0">
                 <img
-                  src={require("../assets/img/feature/feature3.svg")}
+                  className="retail_feature_img3"
+                  src={require("../assets/img/feature/retail_feature3.svg")}
                   alt=""
                 />
               </div>
@@ -318,9 +331,22 @@ export default function Retail() {
                   <span></span>
                   <span></span>
                 </div>
-                <h2></h2>
+                <h2>始于工具但不止于工具</h2>
+
                 <p>
-                  无需每次开通OTA都要支付高额的保证金，不论产品种类多与少，不论多少个OTA。旅点已为您降低保证金的需求规模，让您用更少的钱。发票的负担也更轻松简单。{" "}
+                  <span className="fw_b">在线经营不知从何下手？</span>
+                  <br />
+                  旅点一对一专属商务经理对接，一步步协助您的需求。
+                  <br />
+                  不论是技术问题，产品需求，还是营销策略，商务经理都能为您提供方案
+                  <br />
+                  <br />
+                  <span className="fw_b">一个旅点，全域赋能</span>
+                  <br />
+                  希望同时【买】【卖】和【经营】吗？
+                  <br />
+                  没问题，旅点旗下产品交互使用，全域赋能
+                  <br />
                 </p>
               </div>
             </div>
@@ -347,7 +373,9 @@ export default function Retail() {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px fc_white">抢先体验旅点零售，体验版招募中</h1>
+                <h1 className="fs_34px fc_white">
+                  抢先体验旅点零售，体验版招募中
+                </h1>
                 <ul className="list-check fc_white mt-10 ">
                   <li>抢先市场体验30天</li>
                   <li>体验期间免费建站，免支付手续费</li>
