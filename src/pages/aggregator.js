@@ -16,7 +16,7 @@ export default function UGS() {
   return (
     <div>
       <Helmet>
-        <title>旅点科技 - 旅点采购</title>
+        <title>旅点科技 - 买产品</title>
       </Helmet>
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>

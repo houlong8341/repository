@@ -99,14 +99,14 @@ export default function Header(props) {
                       <Link to="/">首页</Link>
                     </li>
                     <li>
-                      <Link to="/ugs">UGS</Link>
+                      <Link to="/ugs">卖产品</Link>
                     </li>
 
                     <li>
-                      <Link to="/aggregator">采购</Link>
+                      <Link to="/aggregator">买产品</Link>
                     </li>
                     <li>
-                      <Link to="/retail">零售</Link>
+                      <Link to="/retail">经营</Link>
                     </li>
                     <li>
                       <Link to="/blog/list">旅点资讯</Link>
