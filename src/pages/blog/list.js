@@ -90,7 +90,7 @@ export default function List() {
                     </div>
 
                     <div className="blog-content">
-                      <span className="posted">12 Feb 2019</span>
+                      <span className="posted">{blogitem.date}</span>
 
                       <h3>
                         <Link to="/blog/blog" state={{ id: blogitem.id }}>
@@ -98,13 +98,13 @@ export default function List() {
                         </Link>
                       </h3>
 
-                      <Link
+                      {/* <Link
                         to="/blog/blog"
                         state={{ id: blogitem.id }}
                         className="btn-inline"
                       >
                         阅读全文
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>

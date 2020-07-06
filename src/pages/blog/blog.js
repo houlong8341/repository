@@ -41,10 +41,10 @@ export default function Blog({ location }) {
                 <div className="post-meta">
                   <ul className="list-inline">
                     <li>
-                      作者: <a href="#">圆润小胖子</a>
+                      作者: {blogdetail.author}
                     </li>
                     <li>
-                      发布日期: <a href="#">2020-02-18</a>
+                      发布日期: {blogdetail.date}
                     </li>
                   </ul>
                 </div>
