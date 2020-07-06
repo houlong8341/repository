@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 import lodashFp from "lodash/fp"
 import Helmet from "react-helmet"
 import $ from "jquery"
+
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import { action_blog_page, action_blog_count } from "../../action/airtable"
@@ -79,7 +80,7 @@ export default function List() {
                 <div className="col-lg-4 col-sm-6" key={blogitem.id}>
                   <div className="single-blog-item">
                     <div className="blog-image">
-                      <Link to="/blog/blog" state={{ id: blogitem.id }}>
+                      <Link to={`/blog/blog/?${blogitem.id}`} >
                         <img
                           src={require(`../../assets/img/blog/${blogitem.imgpath}`)}
                           data-rjs="2"
@@ -93,7 +94,7 @@ export default function List() {
                       <span className="posted">{blogitem.date}</span>
 
                       <h3>
-                        <Link to="/blog/blog" state={{ id: blogitem.id }}>
+                        <Link to={`/blog/blog/?${blogitem.id}`} >
                           {blogitem.title}
                         </Link>
                       </h3>

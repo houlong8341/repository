@@ -10,22 +10,24 @@ const blog_detail =
   "https://1666758333212928.cn-zhangjiakou.fc.aliyuncs.com/2016-08-15/proxy/fun_airtable/fun_blog_detail/"
 const blog_page =
   "https://1666758333212928.cn-zhangjiakou.fc.aliyuncs.com/2016-08-15/proxy/fun_airtable/fun_blog_page/"
-  const blog_count =
+const blog_count =
   "https://1666758333212928.cn-zhangjiakou.fc.aliyuncs.com/2016-08-15/proxy/fun_airtable/fun_blog_count/"
 
-export async function action_saveMobile_get(mobile,product) {
+export async function action_saveMobile_get(mobile, product) {
   try {
-    const response = await axios.get(mobile_insert + "?mobile=" + mobile+"&product="+product)
+    const response = await axios.get(
+      mobile_insert + "?mobile=" + mobile + "&product=" + product
+    )
     //console.log(response)
   } catch (error) {
     console.error(error)
   }
 }
 
-export async function action_blog_gettop3() {
+export async function action_blog_gettop(top) {
   let result = []
   try {
-    const response = await axios.get(blog_top3)
+    const response = await axios.get(blog_top3 + "?top=" + top)
     if (response && !lodashFp.isNull(response.data)) {
       result = response.data
     }

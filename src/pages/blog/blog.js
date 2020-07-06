@@ -2,28 +2,45 @@ import React, { useState, useEffect } from "react"
 import Helmet from "react-helmet"
 import lodashFp from "lodash/fp"
 import $ from "jquery"
+
 import Header from "../../components/header"
 import Footer from "../../components/footer"
-import { action_blog_getdetail } from "../../action/airtable"
+import {
+  action_blog_getdetail,
+  action_blog_gettop,
+} from "../../action/airtable"
 
 export default function Blog({ location }) {
-  const [windowsWidth] = useState(100)
+  let id = null
+  if (location && location.search) {
+    id = location.search.replace("?", "")
+  }
+  const [blogid,setBlogId] = useState(id)
   const [blogdetail, setBlogDetail] = useState({})
+  const [blogList, setBlogList] = useState([])
   //因为异步原因，将img路径绑定
   const [imgpath, setImgPath] = useState()
 
   useEffect(() => {
-    if (location && location.state.id) {
-      action_blog_getdetail(location.state.id).then(binfo => {
+    $(".preloader").fadeIn(1000)
+    if (blogid) {
+      action_blog_getdetail(blogid).then(binfo => {
         if (!lodashFp.isNull(binfo)) {
-          //console.log(binfo)
           setBlogDetail(binfo)
           setImgPath(require(`../../assets/img/blog/${binfo.imgpath}`))
           $(".preloader").fadeOut(1000)
         }
       })
+      action_blog_gettop(6).then(blist => {
+        if (!lodashFp.isNull(blist)) {
+          setBlogList(blist)
+        }
+      })
     }
-  }, [windowsWidth])
+  }, [blogid])
+  function changeBlogId(id){
+    setBlogId(id)
+  }
   return (
     <div>
       <Helmet>
@@ -32,7 +49,7 @@ export default function Blog({ location }) {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header />
+      <Header index={4} />
       <section className="pt-120 pb-140">
         <div className="container">
           <div className="row">
@@ -40,12 +57,8 @@ export default function Blog({ location }) {
               <div className="blog-details">
                 <div className="post-meta">
                   <ul className="list-inline">
-                    <li>
-                      作者: {blogdetail.author}
-                    </li>
-                    <li>
-                      发布日期: {blogdetail.date}
-                    </li>
+                    <li>作者: {blogdetail.author}</li>
+                    <li>发布日期: {blogdetail.date}</li>
                   </ul>
                 </div>
                 <div className="post-title">
@@ -64,63 +77,32 @@ export default function Blog({ location }) {
               <aside className="blog-sidebar mt-80 mt-lg-0">
                 <div className="widget widget_service">
                   <div className="widget-title">
-                    <h4>相关产品</h4>
+                    <h4>相关资讯</h4>
                   </div>
                   <ul className="service-list">
-                    <li>
-                      <a href="#">
-                        <img
-                          src={require("../../assets/img/icon/sw-1.svg")}
-                          className="svg"
-                          alt=""
-                        />{" "}
-                        旅点UGS
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          src={require("../../assets/img/icon/sw-2.svg")}
-                          className="svg"
-                          alt=""
-                        />{" "}
-                        Link Building
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          src={require("../../assets/img/icon/sw-3.svg")}
-                          className="svg"
-                          alt=""
-                        />{" "}
-                        Organize SEO
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          src={require("../../assets/img/icon/sw-4.svg")}
-                          className="svg"
-                          alt=""
-                        />{" "}
-                        Competitor Analysis
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img
-                          src={require("../../assets/img/icon/sw-5.svg")}
-                          className="svg"
-                          alt=""
-                        />{" "}
-                        Link Organization
-                      </a>
-                    </li>
+                    {blogList.map((bitem, index) => {
+                      if (index < 5 && bitem.id != blogdetail.id) {
+                        return (
+                          <li key={bitem.id}>
+                            <a onClick={()=>changeBlogId(bitem.id)} className='blogtitle-list'>
+                              <img
+                                src={require(`../../assets/img/icon/sw-${
+                                  index + 1
+                                }.svg`)}
+                                className="svg"
+                                alt=""
+                              />
+                              {bitem.title}
+                            </a>
+                          </li>
+                        )
+                      }
+                    })}
+                    
                   </ul>
                 </div>
 
-                <div className="widget widget_tag_cloud">
+                {/* <div className="widget widget_tag_cloud">
                   <div className="widget-title">
                     <h4>标签</h4>
                   </div>
@@ -134,7 +116,7 @@ export default function Blog({ location }) {
                     <a href="#">#Trading</a>
                     <a href="#">#Travel</a>
                   </div>
-                </div>
+                </div> */}
               </aside>
             </div>
           </div>

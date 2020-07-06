@@ -3,16 +3,9 @@ import { Link, navigate } from "gatsby"
 import Helmet from "react-helmet"
 import lodashFp from "lodash/fp"
 
-import "owl.carousel/dist/assets/owl.carousel.css"
-import "font-awesome/css/font-awesome.min.css"
-import "react-fontawesome"
-import "../assets/css/bootstrap.min.css"
-import "../assets/css/style.css"
-import "../assets/css/custom.css"
-
-import { Main } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import { Main } from "../assets/js/main"
 import { action_saveMobile_get } from "../action/airtable"
 
 export default function Home({location}) {
@@ -35,9 +28,6 @@ export default function Home({location}) {
     <div>
       <Helmet>
         <title>旅点科技 Trip International</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="旅点科技" />
-        <meta name="keywords" content="旅点科技" />
       </Helmet>
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
@@ -66,7 +56,7 @@ export default function Home({location}) {
                   </div>
                   <img
                     className="banner_img"
-                    src={require("../assets/img/banner/banner1.svg")}
+                    src={require("../assets/img/banner/banner.svg")}
                     alt=""
                   />
                 </div>

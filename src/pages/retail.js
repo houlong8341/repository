@@ -2,13 +2,6 @@ import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import Helmet from "react-helmet"
 
-import "owl.carousel/dist/assets/owl.carousel.css"
-import "font-awesome/css/font-awesome.min.css"
-import "react-fontawesome"
-import "../assets/css/bootstrap.min.css"
-import "../assets/css/style.css"
-import "../assets/css/custom.css"
-
 import { Default } from "../assets/js/main"
 import Header from "../components/header"
 import Footer from "../components/footer"
@@ -34,9 +27,6 @@ export default function Retail() {
     <div>
       <Helmet>
         <title>旅点科技 - 经营平台</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="旅点科技" />
-        <meta name="keywords" content="旅点科技" />
       </Helmet>
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>

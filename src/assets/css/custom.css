@@ -196,6 +196,13 @@
   left: 5%;
   height: 1px;
 }
+
+.blogtitle-list{
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 /*------*/
 
 .footer_qr {
