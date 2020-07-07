@@ -15,7 +15,7 @@ export default function Blog({ location }) {
   if (location && location.search) {
     id = location.search.replace("?", "")
   }
-  const [blogid,setBlogId] = useState(id)
+  const [blogid, setBlogId] = useState(id)
   const [blogdetail, setBlogDetail] = useState({})
   const [blogList, setBlogList] = useState([])
   //因为异步原因，将img路径绑定
@@ -33,12 +33,15 @@ export default function Blog({ location }) {
       })
       action_blog_gettop(6).then(blist => {
         if (!lodashFp.isNull(blist)) {
+          blist = blist.filter(item => {
+            return item.id != blogid
+          })
           setBlogList(blist)
         }
       })
     }
   }, [blogid])
-  function changeBlogId(id){
+  function changeBlogId(id) {
     setBlogId(id)
   }
   return (
@@ -81,10 +84,13 @@ export default function Blog({ location }) {
                   </div>
                   <ul className="service-list">
                     {blogList.map((bitem, index) => {
-                      if (index < 5 && bitem.id != blogdetail.id) {
+                      if (index < 5) {
                         return (
                           <li key={bitem.id}>
-                            <a onClick={()=>changeBlogId(bitem.id)} className='blogtitle-list'>
+                            <a
+                              onClick={() => changeBlogId(bitem.id)}
+                              className="blogtitle-list"
+                            >
                               <img
                                 src={require(`../../assets/img/icon/sw-${
                                   index + 1
@@ -98,7 +104,6 @@ export default function Blog({ location }) {
                         )
                       }
                     })}
-                    
                   </ul>
                 </div>
 

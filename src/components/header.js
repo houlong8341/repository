@@ -42,12 +42,10 @@ export default function Header(props) {
         $(".nav-wrapper").addClass("active")
         $(".main-menu").removeClass("justify-content-end")
         $(".main-menu").addClass("justify-content-between")
-        
       } else {
         $(".nav-wrapper").removeClass("active")
         $(".main-menu").removeClass("justify-content-between")
         $(".main-menu").addClass("justify-content-end")
-        
       }
       if ($(window).width() < 1080) {
         $("#web_signup").hide()
@@ -66,6 +64,11 @@ export default function Header(props) {
         $(".header-main").addClass("sticky fadeInDown animated")
       }
     })
+    //baidu accout
+    let hm = document.createElement("script")
+    hm.src = "https://hm.baidu.com/hm.js?51bbcb5d2f48ba73e4de0443509ccf3b"
+    var s = document.getElementsByTagName("script")[0]
+    s.parentNode.insertBefore(hm, s)
   }, [header])
   function onJoin() {
     let signUp = document.getElementById("Signup")
@@ -117,9 +120,7 @@ export default function Header(props) {
                       <Link to="/blog/list">旅点资讯</Link>
                     </li>
                     <li id="mobile_signup">
-                      <a onClick={() => onJoin()}>
-                        加入体验
-                      </a>
+                      <a onClick={() => onJoin()}>加入体验</a>
                     </li>
                   </ul>
                 </div>

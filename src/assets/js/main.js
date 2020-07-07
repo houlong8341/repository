@@ -30,7 +30,6 @@ export function goSignUp() {
 }
 
 export function Main(location) {
-  console.log(location)
   if (location && location.state && location.state.signUp) {
     goSignUp()
   }
