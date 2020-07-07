@@ -27,9 +27,12 @@ export default function Header(props) {
     if ($(window).width() > 974) {
       $(".nav-wrapper").toggleClass("active")
       $(".main-menu").toggleClass("justify-content-between")
+      $("#web_signup").show()
+      $("#mobile_signup").hide()
     } else {
       $(".main-menu").toggleClass("justify-content-end")
-      $(".nav_signup").hide()
+      $("#web_signup").hide()
+      $("#mobile_signup").show()
     }
     if ($(window).width() < 1080) {
       $(".nav_signup").hide()
@@ -39,17 +42,19 @@ export default function Header(props) {
         $(".nav-wrapper").addClass("active")
         $(".main-menu").removeClass("justify-content-end")
         $(".main-menu").addClass("justify-content-between")
-        $(".nav_signup").show()
+        
       } else {
         $(".nav-wrapper").removeClass("active")
         $(".main-menu").removeClass("justify-content-between")
         $(".main-menu").addClass("justify-content-end")
-        $(".nav_signup").hide()
+        
       }
       if ($(window).width() < 1080) {
-        $(".nav_signup").hide()
+        $("#web_signup").hide()
+        $("#mobile_signup").show()
       } else {
-        $(".nav_signup").show()
+        $("#web_signup").show()
+        $("#mobile_signup").hide()
       }
     })
 
@@ -111,9 +116,15 @@ export default function Header(props) {
                     <li>
                       <Link to="/blog/list">旅点资讯</Link>
                     </li>
+                    <li id="mobile_signup">
+                      <a onClick={() => onJoin()}>
+                        加入体验
+                      </a>
+                    </li>
                   </ul>
                 </div>
-                <a                  
+                <a
+                  id="web_signup"
                   className="nav_signup"
                   onClick={() => onJoin()}
                 >

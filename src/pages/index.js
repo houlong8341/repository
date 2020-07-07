@@ -47,7 +47,7 @@ export default function Home({location}) {
                 </div>
               </div>
               <div className="banner-images row justify-content-between align-items-end">
-                <div className="m0a single-banner-image text-center col-sm-6 d-none d-sm-block">
+                <div className="m0a single-banner-image text-center col-sm-6 d-sm-block">
                   <div className="search-icon-box position-absolute">
                     <img
                       src={require("../assets/img/banner/search-icon.png")}
