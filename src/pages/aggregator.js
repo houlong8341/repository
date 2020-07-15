@@ -233,11 +233,11 @@ export default function UGS() {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px fc_white">抢先体验，公测招募中</h1>
+                <h1 className="fs_34px fc_white">旅点采购体验版抢先使用</h1>
                 <ul className="list-check fc_white">
                   <li>抢先预订国内酒店</li>
-                  <li>价格更低更有优势</li>
-                  <li>各类活动进行中</li>
+                  <li>体验版，价格更低更有优势</li>
+                  <li>体验版各类活动进行中</li>
                   <li>体验版参与者均获得无门槛100元抵用金</li>
                 </ul>
                 <a href="http://www.b2b.intltrip.com" className="b2b_btn red_btn">开始体验</a>

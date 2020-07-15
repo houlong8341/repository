@@ -76,7 +76,7 @@ export default function UGS() {
                       onChange={onMobileChange}
                     />
                     <button className="red_btn" type="submit">
-                      加入公测
+                      加入体验
                     </button>
                   </form>
                 </div>
@@ -327,17 +327,17 @@ export default function UGS() {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px">抢先体验，公测招募中</h1>
+                <h1 className="fs_34px">抢先体验旅点UGS，体验版招募中</h1>
 
                 <p>旅点正在积极寻求您的体验反馈~ </p>
                 <ul className="list-check">
                   <li>抢先体验30天</li>
-                  <li>公测期间免佣金，免服务费</li>
-                  <li>前100名公测后90天可享受免佣金，免手续费</li>
+                  <li>体验期间免佣金，免服务费</li>
+                  <li>前100名体验者，可享受90天享受免佣金，免手续费等高级功能</li>
                 </ul>
 
                 <div className="search-form mt-20">
-                  <p>提交联系方式，加入公测~</p>
+                  <p>提交联系方式，抢先体验~</p>
                   <div className="theme-input-group">
                     <form onSubmit={onMobileSubmit}>
                       <input
@@ -348,7 +348,7 @@ export default function UGS() {
                         onChange={onMobileChange}
                       />
                       <button className="red_btn" type="submit">
-                        加入公测
+                        加入体验
                       </button>
                     </form>
                   </div>

@@ -15,9 +15,7 @@ const blog_count =
 
 export async function action_saveMobile_get(mobile, product) {
   try {
-    const response = await axios.get(
-      mobile_insert + "?mobile=" + mobile + "&product=" + product
-    )
+    await axios.get(mobile_insert + "?mobile=" + mobile + "&product=" + product)
     //console.log(response)
   } catch (error) {
     console.error(error)

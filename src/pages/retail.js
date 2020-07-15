@@ -384,7 +384,7 @@ export default function Retail() {
                         onChange={onMobileChange}
                       />
                       <button className="red_btn" type="submit">
-                        加入公测
+                        加入体验
                       </button>
                     </form>
                   </div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Link, navigate } from "gatsby"
+import { navigate, Link } from "gatsby"
 import Helmet from "react-helmet"
-import lodashFp from "lodash/fp"
 
 import Header from "../components/header"
 import Footer from "../components/footer"
@@ -10,10 +9,9 @@ import { action_saveMobile_get } from "../action/airtable"
 
 export default function Home({location}) {
   const [mobile, setMobile] = useState("")
-  const [windowsWidth] = useState(100)
   useEffect(() => {
     Main(location)
-  }, [windowsWidth])
+  }, [location])
   function onMobileChange(event) {
     setMobile(event.target.value)
   }
@@ -84,7 +82,7 @@ export default function Home({location}) {
                 data-owl-dots="false"
                 data-owl-responsive='{"0": {"items": "2"},"575":{"items": "3"},"768": {"items": "4"},"992": {"items": "5"}}'
               >
-                <a href="#" className="single-brand-logo">
+                <a className="single-brand-logo">
                   <img
                     src={require("../assets/img/brand/jinqiao.jpg")}
                     data-rjs="2"
@@ -96,7 +94,7 @@ export default function Home({location}) {
                     alt=""
                   />
                 </a>
-                <a href="#" className="single-brand-logo">
+                <a className="single-brand-logo">
                   <img
                     src={require("../assets/img/brand/ama2.png")}
                     data-rjs="2"
@@ -108,7 +106,7 @@ export default function Home({location}) {
                     alt=""
                   />
                 </a>
-                <a href="#" className="single-brand-logo">
+                <a className="single-brand-logo">
                   <img
                     src={require("../assets/img/brand/bd.png")}
                     data-rjs="2"
@@ -120,7 +118,7 @@ export default function Home({location}) {
                     alt=""
                   />
                 </a>
-                <a href="#" className="single-brand-logo">
+                <a className="single-brand-logo">
                   <img
                     src={require("../assets/img/brand/dida.png")}
                     data-rjs="2"
@@ -132,7 +130,7 @@ export default function Home({location}) {
                     alt=""
                   />
                 </a>
-                <a href="#" className="single-brand-logo">
+                <a className="single-brand-logo">
                   <img
                     src={require("../assets/img/brand/ws.png")}
                     data-rjs="2"
@@ -179,9 +177,9 @@ export default function Home({location}) {
                     <li>支付宝，微信，额度支付</li>
                   </ul>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
+                <Link to="/aggregator" className="btn-inline mt-30 fc_red">
                   了解关于旅.采购
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -201,9 +199,9 @@ export default function Home({location}) {
                     <li>实时发布产品，实时更新库存</li>
                   </ul>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
+                <Link to="/ugs" className="btn-inline mt-30 fc_red">
                   了解关于旅.UGS
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -223,9 +221,9 @@ export default function Home({location}) {
                     <li>激活现有客户群体</li>
                   </ul>
                 </div>
-                <a href="#" className="btn-inline mt-30 fc_red">
+                <Link to="/retail" className="btn-inline mt-30 fc_red">
                   了解关于旅.零售
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -251,15 +249,14 @@ export default function Home({location}) {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px fc_white">抢先体验，公测招募中</h1>
+                <h1 className="fs_34px fc_white">抢先体验旅点，体验版邀请中</h1>
                 <ul className="list-check fc_white">
-                  <li>抢先体验30天</li>
-                  <li>体验期间全部功能免费使用</li>
+                  <li>优先体验30天</li>
+                  <li>体验期间，全部功能均免费使用</li>
                   <li>前100名体验者，可享受90天免佣金、免手续费等高级功能</li>
                 </ul>
 
                 <div className="search-form mt-20">
-                  {/* <p className="fc_white">提交联系方式，加入公测~</p> */}
                   <div className="theme-input-group">
                     <form onSubmit={onMobileSubmit}>
                       <input
@@ -402,7 +399,7 @@ export default function Home({location}) {
       </section>
 
       <Footer />
-      <a href="#" className="back-to-top">
+      <a className="back-to-top">
         <i className="fa fa-angle-up"></i>
       </a>
     </div>
