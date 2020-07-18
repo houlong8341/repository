@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 import { Main } from "../assets/js/main"
 import { action_saveMobile_get } from "../action/airtable"
 
-export default function Home({location}) {
+export default function Home({ location }) {
   const [mobile, setMobile] = useState("")
   useEffect(() => {
     Main(location)
@@ -18,7 +18,7 @@ export default function Home({location}) {
   function onMobileSubmit(e) {
     e.preventDefault()
     if (mobile) {
-      action_saveMobile_get(mobile,'UGS and Retail')
+      action_saveMobile_get(mobile, "UGS and Retail")
       navigate("/comingsoon")
     }
   }
@@ -30,7 +30,7 @@ export default function Home({location}) {
       <div className="preloader w-100 h-100 position-fixed">
         <span className="loader">Loading…</span>
       </div>
-      <Header index={0}/>
+      <Header index={0} />
 
       <div className="banner">
         <div className="banner_slider">
@@ -39,7 +39,7 @@ export default function Home({location}) {
               <div className="row">
                 <div className="col-12">
                   <div className="banner_content text-center">
-                    <h1 className="banner_h1">旅点. 您旅业经营的另一半</h1>
+                    <h1 className="banner_h1">旅点科技. 您旅业经营的另一半</h1>
                     <p>旅业经营本不易，让旅点帮您分忧~</p>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ export default function Home({location}) {
 
             <div className="col-lg-6">
               <div className="content-coming-soon">
-                <h1 className="fs_34px fc_white">抢先体验旅点，体验版邀请中</h1>
+                <h1 className="fs_34px fc_white">旅点科技，抢先体验旅点，体验版邀请中</h1>
                 <ul className="list-check fc_white">
                   <li>优先体验30天</li>
                   <li>体验期间，全部功能均免费使用</li>

@@ -83,8 +83,8 @@ export default function Header(props) {
     <header className="header">
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="旅点科技" />
-        <meta name="keywords" content="旅点科技" />
+        <meta name="description" content="旅点、旅点科技致力于旅业经营" />
+        <meta name="keywords" content="旅点、旅点科技" />
       </Helmet>
       <div className="header-main">
         <div className="container-fluid">
